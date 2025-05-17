@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Finder</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1><span class="logo">🎬</span> <span class="title-text">Movie Finder</span></h1>
+
+      <div style="margin-left:auto;">
+        <span>Welcome, {{ username }}!</span>
+        <a href="{{ url_for('logout') }}" id="logout-btn" title="Logout" style="margin-left: 10px; font-size: 1.4em; background: none; border: none; cursor: pointer; text-decoration: none;">🚪</a>
+      </div>
+
+      <button id="toggle-theme" title="Toggle Dark Mode">🌗</button>
+    </div>
+
+    <!-- Flash Messages -->
+    <div class="flash-messages">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="flash {{ category }}">
+              {{ message }}
+              <button type="button" class="close-flash">&times;</button>
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      
+      <!-- Search Section -->
+      <div class="search-section card">
+        <h2 class="section-title">Search for a Movie</h2>
+        <div class="search-box">
+          <input type="text" id="search-input" placeholder="Type movie title..." />
+          <button id="search-btn">🔍 Search</button>
+        </div>
+        <div id="results"></div>
+      </div>
+
+      <!-- Side Panel -->
+      <div class="side-section">
+
+        <!-- Watchlist -->
+        <div class="card">
+          <div class="side-header">
+            <span>⭐</span> Watchlist
+          </div>
+          <div id="watchlist"></div>
+          <div id="watchlist-actions">
+            <hr style="margin-top: 12px; margin-bottom: 8px;">
+            <button id="delete-watchlists-btn" class="block-btn" style="background-color: #dc3545; color: #fff; margin-top: 8px;">🗑️ Delete Watchlists</button>
+            <button id="create-watchlist-btn" class="block-btn" style="background-color: #28a745; color: #fff; margin-top: 8px;">➕ Create Watchlist</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for creating watchlist -->
+  <div id="create-watchlist-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-create-watchlist-modal">&times;</span>
+      <h3>Create a New Watchlist</h3>
+      <div id="popup-message"></div>
+      <form id="create-watchlist-form">
+        <label for="watchlist_name">Watchlist Name</label>
+        <input type="text" id="watchlist_name" name="watchlist_name" required placeholder="e.g. Favorites">
+
+        <label for="watchlist_color">Choose a Color</label>
+        <input type="color" id="watchlist_color" name="watchlist_color" value="#007bff" required>
+
+        <button type="submit" class="block-btn" style="margin-top:16px;">Create Watchlist</button>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer style="text-align: center; margin-top: 40px; font-size: 0.9em; color: #999;">
+    <p>Made with ❤️</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="/static/js/script.js"></script>
+</body>
+</html>

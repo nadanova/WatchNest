@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Standard head content -->
+    <title>{{ watchlist.name }} | Movie Finder</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/watchlist-detail.css">
+</head>
+<body class="{% if session.get('dark_mode') %}dark-mode{% endif %}">
+    <div class="container">
+        <!-- Flash messages div for notifications -->
+        <div class="flash-messages"></div>
+        
+        <div class="header">
+        <h1><span class="logo">🎬</span> <span class="title-text">Movie Finder</span></h1>
+
+        <div style="margin-left:auto;">
+            <span>Welcome, {{ session.username }}!</span>
+            <a href="{{ url_for('logout') }}" id="logout-btn" title="Logout" style="margin-left: 10px; font-size: 1.4em; background: none; border: none; cursor: pointer; text-decoration: none;">🚪</a>
+        </div>
+
+        <button id="toggle-theme" title="Toggle Dark Mode">🌗</button>
+        </div>
+    
+    
+        <!-- Watchlist navigation bar -->
+        <div class="watchlist-nav">
+            {% for wl in all_watchlists %}
+                <a href="{{ url_for('watchlist_detail', watchlist_id=wl.watchlist_id) }}" 
+                class="watchlist-nav-item {% if wl.watchlist_id == watchlist.watchlist_id %}active{% endif %}"
+                style="background-color: {{ wl.color }}; color: {% if is_light_color(wl.color) %}#000{% else %}#fff{% endif %}">
+                    {{ wl.name }}
+                </a>
+            {% endfor %}
+        </div>
+    
+        <!-- Watchlist content -->
+        <div class="watchlist-detail" data-watchlist-id="{{ watchlist.watchlist_id }}">
+            <h2 class="watchlist-title" style="color: {{ watchlist.color }}">{{ watchlist.name }}</h2>
+
+            <!-- Watchlist notes section -->
+            <div class="watchlist-notes-section">
+                <div class="notes-header">
+                    <h3>Notes</h3>
+                    <button id="edit-notes-btn" class="action-btn edit-btn" title="Edit Notes">✏️</button>
+                </div>
+                <div id="notes-display" class="notes-display">
+                    {% if watchlist.notes %}
+                        <p>{{ watchlist.notes }}</p>
+                    {% else %}
+                        <p class="no-notes">No notes yet. Click the edit button to add notes.</p>
+                    {% endif %}
+                </div>
+                <div id="notes-editor" class="notes-editor" style="display: none;">
+                    <textarea id="notes-textarea">{{ watchlist.notes }}</textarea>
+                    <div class="notes-actions">
+                        <button id="cancel-notes-btn" class="action-btn cancel-btn">Cancel</button>
+                        <button id="save-notes-btn" class="action-btn save-btn">Save Notes</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add the watchlist toolbar after the notes -->
+            <div class="watchlist-toolbar">
+                <button id="delete-movies-btn" class="action-btn delete-btn">
+                    <span>🗑️</span> Delete Movies
+                </button>
+                <div id="selection-actions" style="display: none;">
+                    <span id="selection-counter">0 selected</span>
+                    <button id="cancel-selection-btn" class="action-btn cancel-btn">Cancel</button>
+                    <button id="confirm-delete-btn" class="action-btn confirm-btn">Delete Selected</button>
+                </div>
+            </div>
+
+            {% if movies %}
+                <!-- <div class="movie-grid">
+                    {% for movie in movies %}
+                        <div class="movie-card" data-movie-id="{{ movie.movie_id }}">
+                              <img src="{{ movie.poster_url or '/static/images/no-poster.png' }}" alt="{{ movie.title }} poster">
+                            <h3>{{ movie.title }}</h3>
+                            <div class="watchlist-movie-details">
+                                <p class="watchlist-release-date">{{ movie.release_date }}</p>
+                                {% if movie.rating %}
+                                    <div class="watchlist-rating">⭐ {{ "%.1f"|format(movie.rating) }}/10</div>
+                                {% else %}
+                                    <div class="watchlist-rating watchlist-rating-none">Not rated</div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div> -->
+                <div class="movie-grid">
+                    {% for movie in movies %}
+                        <div class="movie-card" data-movie-id="{{ movie.movie_id }}" data-entry-id="{{ movie.entry_id }}">
+                            <img src="{{ movie.poster_url or '/static/images/no-poster.png' }}" alt="{{ movie.title }} poster">
+                            <h3>{{ movie.title }}</h3>
+                            <div class="watchlist-movie-details">
+                                <p class="watchlist-release-date">{{ movie.release_date }}</p>
+                                {% if movie.rating %}
+                                    <div class="watchlist-rating">⭐ {{ "%.1f"|format(movie.rating) }}/10</div>
+                                {% else %}
+                                    <div class="watchlist-rating watchlist-rating-none">Not rated</div>
+                                {% endif %}
+                            </div>
+                            <div class="watched-checkbox">
+                                <label>
+                                    <input type="checkbox"
+                                        class="toggle-watched"
+                                        data-entry-id="{{ movie.entry_id }}"
+                                        {% if movie.watched %}checked{% endif %}>
+                                    Watched
+                                </label>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="empty-state">No movies in this watchlist yet. 
+                <a href="{{ url_for('home') }}">Go search</a> for movies to add!</p>
+            {% endif %}
+        </div>
+    </div> 
+    
+    <!-- Footer -->
+    <footer>
+        <a href="{{ url_for('home') }}" class="back-home-btn">Back to Home</a>
+        <p>Made with ❤️</p>
+    </footer>
+    
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

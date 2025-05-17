@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - Movie Finder</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  
+  <div class="container auth-container">
+    <header class="header">
+      <h1><span class="logo">🎬</span> <span class="title-text">Movie Finder</span></h1>
+    </header>
+    <main>
+      <section class="auth-card">
+        <h2>Create an Account</h2>
+
+        <!-- Flash messages block START -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <div class="flash-messages">
+              {% for category, message in messages %}
+                <div class="flash {{ category }}">{{ message }}</div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+        <!-- Flash messages block END -->
+
+        <form id="register-form" method="post" action="/register">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required autocomplete="username" aria-label="Username">
+          
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required autocomplete="new-password" aria-label="Password">
+          
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm_password" required aria-label="Confirm Password">
+          
+          <button type="submit" class="block-btn">Register</button>
+        </form>
+        <p class="auth-switch">Already have an account? <a href="login">Login</a></p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
