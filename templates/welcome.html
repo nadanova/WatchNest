@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome - Movie Finder</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    .welcome-hero {
+      background: linear-gradient(120deg, #007bff 60%, #ffd700 100%);
+      border-radius: 16px 16px 0 0;
+      padding: 34px 0 18px 0;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+    }
+    .welcome-hero .logo {
+      font-size: 3.2em;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .welcome-hero h1 {
+      font-size: 2.4em;
+      letter-spacing: 2px;
+      margin: 0 0 6px 0;
+    }
+    .welcome-hero .catchphrase {
+      font-size: 1.15em;
+      font-weight: 400;
+      margin-top: 12px;
+      opacity: 0.93;
+    }
+    .auth-card {
+      margin-top: -24px;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .cta-row {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 24px;
+    }
+    .block-btn {
+      width: 120px;
+      text-align: center;
+      font-size: 1.1em;
+      font-weight: 500;
+      border-radius: 7px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 11px 0;
+      transition: background 0.19s, color 0.18s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      text-decoration: none;
+      display: inline-block;
+    }
+    .block-btn:hover {
+      background: #005fc1;
+      color: #ffd700;
+      text-decoration: none;
+    }
+    .block-btn.alt {
+      background: #ffd700;
+      color: #222;
+    }
+    .block-btn.alt:hover {
+      background: #ffe77a;
+      color: #222;
+    }
+    @media (max-width: 600px) {
+      .welcome-hero { font-size: 0.92em; padding: 22px 0 10px 0; }
+      .cta-row { flex-direction: column; gap: 10px; }
+      .auth-card { margin-top: -12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container auth-container" style="padding:0; background:none; box-shadow:none;">
+    <div class="welcome-hero">
+      <span class="logo">🎬</span>
+      <h1>Movie Finder</h1>
+      <div class="catchphrase">Track, discover, and manage your favorite movies with style.</div>
+    </div>
+    <section class="auth-card" style="max-width:420px; margin:0 auto;">
+      <h2 style="margin-bottom: 7px;">Welcome!</h2>
+      <p>Ready to start your movie journey?</p>
+      <div class="cta-row">
+        <a href="{{ url_for('login') }}" class="block-btn">Login</a>
+        <a href="{{ url_for('register') }}" class="block-btn alt">Register</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
