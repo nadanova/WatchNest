@@ -1,0 +1,1032 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8fafc;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 1020px;
+  margin: 36px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 36px rgba(0,0,0,0.06);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.3em;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 10px;
+  font-size: 1.3em;
+}
+
+#toggle-theme {
+  background: #e4e7ee;
+  color: #222;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.3em;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#toggle-theme:hover {
+  background: #c9cfe0;
+}
+
+.main-content {
+  display: flex;
+  gap: 32px;
+}
+
+.search-section {
+  flex: 2;
+}
+
+.side-section {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card {
+  background: #f6f8fc;
+  border-radius: 10px;
+  padding: 22px 18px 15px 18px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.search-box {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+#search-input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 1em;
+  border: 1px solid #c6d0df;
+  border-radius: 8px;
+  background: #fff;
+  transition: border 0.2s;
+}
+
+#search-input:focus {
+  border: 1.5px solid #007bff;
+  outline: none;
+}
+
+#search-btn {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#search-btn:hover {
+  background: #005fc1;
+}
+
+.movie {
+  background: #fff;
+  margin: 16px 0;
+  padding: 12px 16px 14px 16px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.movie img {
+  max-width: 70px;
+  border-radius: 6px;
+  margin-right: 14px;
+  box-shadow: 0 0 4px #ddd;
+}
+
+.movie-info {
+  flex: 1;
+}
+
+.movie h3 {
+  margin: 0 0 4px 0;
+  font-size: 1.13em;
+  color: #2c3e50;
+}
+
+.movie p {
+  margin: 1px 0;
+  color: #4e5d6c;
+  font-size: 0.98em;
+}
+
+.movie button {
+  margin-top: 8px;
+  padding: 7px 13px;
+  background: #ffd700;
+  color: #222;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.movie button:hover {
+  background: #ffe77a;
+}
+
+.side-header {
+  display: flex;
+  align-items: center;
+  font-size: 1.12em;
+  font-weight: 500;
+  gap: 7px;
+  margin-bottom: 8px;
+  color: #202e42;
+}
+
+#watchlist {
+  text-align: left;
+  font-size: 0.97em;
+  margin-top: 6px;
+}
+
+.block-btn {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 9px 0;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.block-btn:hover {
+  background: #005fc1;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #23272f;
+  color: #e5e6eb;
+}
+
+body.dark-mode .container {
+  background-color: #303542;
+  color: #e5e6eb;
+}
+
+body.dark-mode .card {
+  background: #3c4457;
+}
+
+body.dark-mode .side-header {
+  color: #ffecb3;
+}
+
+body.dark-mode #search-input {
+  background-color: #44495c;
+  color: #fff;
+  border: 1px solid #666d85;
+}
+
+body.dark-mode #search-btn,
+body.dark-mode .block-btn {
+  background: #2e86de;
+  color: #fff;
+}
+
+body.dark-mode #toggle-theme {
+  background: #44495c;
+  color: #fff;
+}
+
+body.dark-mode .movie {
+  background: #44495c;
+  color: #f9f9f9;
+}
+
+body.dark-mode .movie h3 {
+  color: #ffd700;
+}
+
+body.dark-mode .movie button {
+  background: #ffe77a;
+  color: #222;
+}
+
+
+/**************************************************************************/
+/* Auth (Login/Register) Pages */
+.auth-container {
+  max-width: 420px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.auth-card {
+  background: #f6f8fc;
+  border-radius: 10px;
+  padding: 32px 24px 21px 24px;
+  margin: 0 auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.auth-card h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.auth-card label {
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+.auth-card input[type="text"],
+.auth-card input[type="password"] {
+  padding: 10px;
+  border-radius: 7px;
+  border: 1px solid #c6d0df;
+  font-size: 1em;
+  background: #fff;
+  transition: border 0.2s;
+}
+.auth-card input:focus {
+  border: 1.5px solid #007bff;
+  outline: none;
+}
+.auth-card button.block-btn {
+  margin-top: 12px;
+}
+.auth-switch {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.98em;
+}
+.auth-switch a {
+  color: #007bff;
+  text-decoration: none;
+}
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+/* Dark mode for auth */
+body.dark-mode .auth-card {
+  background: #3c4457;
+  color: #fff;
+}
+body.dark-mode .auth-card input[type="text"],
+body.dark-mode .auth-card input[type="password"] {
+  background: #44495c;
+  color: #fff;
+  border: 1px solid #666d85;
+}
+body.dark-mode .auth-switch a {
+  color: #ffd700;
+}
+
+/* flash messages */
+.flash-messages { 
+  margin-bottom: 10px;
+}
+
+.flash.error { 
+  color: #b00; 
+  background: #ffd0d0; 
+  padding: 7px 10px; 
+  border-radius: 5px; 
+}
+
+.flash.success { 
+  color: #27632a; 
+  background: #d5ffd8; 
+  padding: 7px 10px; 
+  border-radius: 5px; 
+}
+
+
+/***************************************************************/
+/* Create Watchlist page styling */
+.create-form {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 24px 26px;
+  background: #f6f8fc;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.create-form label {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.create-form input[type="text"] {
+  padding: 9px 12px;
+  border-radius: 7px;
+  border: 1px solid #c6d0df;
+  font-size: 1em;
+  background: #fff;
+  transition: border 0.2s;
+}
+
+.create-form input[type="text"]:focus {
+  border: 1.5px solid #007bff;
+  outline: none;
+}
+
+.create-form input[type="color"] {
+  width: 48px;
+  height: 32px;
+  border: none;
+  background: none;
+  margin-left: 12px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.create-form button.block-btn {
+  margin-top: 18px;
+  font-size: 1.09em;
+}
+
+
+body.dark-mode .create-form input[type="text"] {
+  background: #44495c;
+  color: #fff;
+  border: 1px solid #666d85;
+}
+
+
+/* Show Watchlists Page Styles */
+.watchlists-title {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.watchlists-list {
+  margin: 32px auto 0 auto;
+  max-width: 380px;
+}
+
+.watchlist-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f7f7fa;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.watchlist-color {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 2px solid #e0e0e0;
+  margin-right: 4px;
+}
+
+.watchlist-name {
+  font-size: 1.15em;
+  font-weight: 500;
+  color: #222;
+}
+
+.no-watchlists-message {
+  text-align: center;
+  margin-top: 48px;
+  font-size: 1.1em;
+  color: #888;
+}
+
+.back-home-btn-container {
+  text-align: center;
+  margin-top: 38px;
+}
+
+.back-home-btn {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1005;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.35);
+}
+
+.modal-content {
+  background: #fff;
+  margin: 70px auto;
+  padding: 32px 24px 20px 24px;
+  border-radius: 12px;
+  width: 95%;
+  max-width: 370px;
+  position: relative;
+  box-shadow: 0 8px 36px 0 rgba(0,0,0,0.18);
+  color: #191919;
+}
+
+/* Dark mode for modal */
+body.dark-mode .modal-content {
+  background: #2a2d37;
+  color: #e0e0e0;
+}
+
+.close {
+  color: #888;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.close:hover { color: #fff; }
+
+#create-watchlist-form label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+#create-watchlist-form input[type="text"],
+#create-watchlist-form input[type="color"] {
+  width: 100%;
+  padding: 7px 8px;
+  margin-bottom: 6px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  color: #191919;
+}
+
+body.dark-mode #create-watchlist-form input[type="text"] {
+  background: #383c45;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+body.dark-mode #create-watchlist-form input[type="color"] {
+  background: #23242b;
+  border: 1px solid #444;
+}
+
+#create-watchlist-form input[type="color"] {
+  height: 38px;
+  padding: 0;
+}
+
+#create-watchlist-form .block-btn {
+  width: 100%;
+}
+
+#popup-message {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 1em;
+}
+
+#popup-message .success {
+  color: #2e7d32;
+}
+#popup-message .error {
+  color: #c62828;
+}
+
+
+/* Styles for the watchlist buttons */
+.watchlist-button {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.watchlist-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.watchlist-button:active {
+  transform: translateY(1px);
+}
+
+/* For dark mode */
+body.dark-mode .watchlist-button {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+
+/* Styles for watchlist selection mode */
+.watchlist-selection-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.watchlist-checkbox {
+  margin-right: 10px;
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+.watchlist-button.in-selection-mode {
+  flex: 1;
+  cursor: default; /* Indicates it's not clickable in selection mode */
+  opacity: 0.9;
+}
+
+.selection-mode-label {
+  margin-left: 10px;
+  font-size: 0.9em;
+  color: #dc3545;
+  font-weight: normal;
+}
+
+body.dark-mode .selection-mode-label {
+  color: #ff8a80;
+}
+
+
+/* watchlist-detail.css */
+
+.watchlist-nav {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    gap: 10px;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.watchlist-nav-item {
+    flex: 0 0 auto;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.watchlist-nav-item:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.watchlist-nav-item.active {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px currentColor;
+}
+
+.navigation-links {
+    margin: 15px 0;
+}
+
+.home-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+}
+
+.watchlist-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.movie-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.dark-mode .movie-card {
+    background: #333;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-card img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+}
+
+.movie-card h3 {
+    padding: 10px;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.movie-card p {
+    padding: 0 10px 10px;
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.dark-mode .movie-card p {
+    color: #aaa;
+}
+
+.remove-btn {
+    margin: auto 10px 10px;
+    padding: 6px;
+    border: none;
+    background: #dc3545;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+.dark-mode .empty-state {
+    color: #aaa;
+}
+
+.back-home-btn {
+    display: block;
+    margin: 30px auto 10px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: center;
+    max-width: 200px;
+    transition: background-color 0.2s;
+}
+
+.back-home-btn:hover {
+    background: #0069d9;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Watchlist toolbar */
+.watchlist-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.action-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.action-btn.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.action-btn.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.action-btn.cancel-btn {
+    background-color: #6c757d;
+    color: white;
+    margin-right: 10px;
+}
+
+.action-btn.cancel-btn:hover {
+    background-color: #5a6268;
+}
+
+.action-btn.confirm-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.action-btn.confirm-btn:hover {
+    background-color: #c82333;
+}
+
+#selection-actions {
+    display: flex;
+    align-items: center;
+}
+
+#selection-counter {
+    margin-right: 15px;
+    font-weight: 500;
+}
+
+/* Selection mode for movie cards */
+.movie-card.in-selection-mode {
+    cursor: pointer;
+    position: relative;
+}
+
+.movie-card.in-selection-mode:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.selection-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+}
+
+.movie-checkbox {
+    transform: scale(1.5);
+    cursor: pointer;
+    accent-color: #007bff;
+}
+
+/* Disabled button */
+.action-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Dark mode adjustments */
+body.dark-mode .action-btn.delete-btn,
+body.dark-mode .action-btn.confirm-btn {
+    background-color: #bd2130;
+}
+
+body.dark-mode .action-btn.cancel-btn {
+    background-color: #5a6268;
+}
+
+body.dark-mode #selection-counter {
+    color: #e5e6eb;
+}
+
+
+/* home - Movie details and rating styles */
+.movie-details {
+  margin-bottom: 10px;
+}
+
+.rating {
+  display: inline-block;
+  font-weight: 500;
+  color: #f39c12;
+  margin-top: 5px;
+}
+
+.dark-mode .rating {
+  color: #ffd700;
+}
+
+/* watchlist- Movie details and rating styles */
+.watchlist-movie-details {
+    padding: 0 10px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.watchlist-release-date {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.watchlist-rating {
+    font-weight: 500;
+    color: #f39c12;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.watchlist-rating-none {
+    color: #999;
+    font-style: italic;
+}
+
+.dark-mode .watchlist-release-date {
+    color: #aaa;
+}
+
+.dark-mode .watchlist-rating {
+    color: #ffd700;
+}
+
+.dark-mode .watchlist-rating-none {
+    color: #777;
+}
+
+
+/* note styles */
+.watchlist-notes-section {
+    background: #f7f7fa;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.notes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.notes-header h3 {
+    margin: 0;
+    color: #444;
+    font-size: 1.1rem;
+}
+
+.action-btn.edit-btn {
+    background: #6c757d;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
+
+.notes-display {
+    min-height: 50px;
+    white-space: pre-wrap;
+    line-height: 1.5;
+}
+
+.notes-display p {
+    margin: 0;
+}
+
+.no-notes {
+    color: #999;
+    font-style: italic;
+}
+
+.notes-editor {
+    margin-top: 10px;
+}
+
+.notes-editor textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+.notes-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.action-btn.save-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Dark mode styles */
+.dark-mode .watchlist-notes-section {
+    background: #3c4457;
+}
+
+.dark-mode .notes-header h3 {
+    color: #e0e0e0;
+}
+
+.dark-mode .notes-editor textarea {
+    background: #444;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+.dark-mode .no-notes {
+    color: #777;
+}
+
+
+
+
+
+
+
+/* Add these styles to your CSS */
+.movie-card.selectable {
+  cursor: pointer;
+  position: relative;
+}
+
+.movie-card.selectable::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.movie-card.selected::before {
+  background-color: #007bff;
+  content: "✓";
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+#selection-actions {
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+
+#selection-counter {
+  margin-right: 10px;
+  font-weight: bold;
+}
