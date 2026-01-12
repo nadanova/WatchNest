@@ -5,7 +5,7 @@ This directory contains the LaTeX source for the Industrial Training Logbook doc
 ## Contents
 
 - `logbook.tex` - Main LaTeX source file containing the complete training documentation
-- `logbook.pdf` - Compiled PDF document (generated from the .tex file)
+- `logbook.pdf` - Pre-compiled PDF document (for convenience; can be regenerated from .tex)
 
 ## Student Information
 
