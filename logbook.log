@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.12)  12 JAN 2026 15:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.12)  12 JAN 2026 15:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -512,24 +512,24 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 No file logbook.aux.
 \openout1 = `logbook.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -564,7 +564,7 @@ LaTeX Font Info:    ... okay on input line 93.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 93.
+Package hyperref Info: Link coloring ON on input line 88.
 \@outlinefile=\write4
 \openout4 = `logbook.out'.
 
@@ -590,146 +590,146 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--100
+Underfull \hbox (badness 10000) in paragraph at lines 93--95
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--104
+Underfull \hbox (badness 10000) in paragraph at lines 97--99
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--112
+Underfull \hbox (badness 10000) in paragraph at lines 102--107
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--122
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--132
+Underfull \hbox (badness 10000) in paragraph at lines 119--127
 
  []
 
 
-Overfull \hbox (245.83588pt too wide) in alignment at lines 170--170
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+[]|\OT1/cmr/bx/n/12 Functional
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (323.86424pt too wide) in alignment at lines 205--205
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
+[]|\OT1/cmr/bx/n/12 Functional
  []
 
 [2]
-Overfull \hbox (323.86424pt too wide) in alignment at lines 240--240
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 235--235
+[]|\OT1/cmr/bx/n/12 Functional
  []
 
 [3]
-Overfull \hbox (305.98248pt too wide) in alignment at lines 275--275
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 270--270
+[]|\OT1/cmr/bx/n/12 Functional
  []
 
 [4]
-Overfull \hbox (312.57545pt too wide) in alignment at lines 310--310
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 305--305
+[]|\OT1/cmr/bx/n/12 Functional
  []
 
 [5]
-Overfull \hbox (313.81573pt too wide) in alignment at lines 345--345
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 340--340
+[]|\OT1/cmr/bx/n/12 Functional
  []
 
 [6]
-Overfull \hbox (305.98248pt too wide) in alignment at lines 380--380
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
+[]|\OT1/cmr/bx/n/12 Functional
  []
 
 [7]
-Overfull \hbox (270.63284pt too wide) in alignment at lines 415--415
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
+[]|\OT1/cmr/bx/n/12 Functional
  []
 
 [8]
-Overfull \hbox (318.86847pt too wide) in alignment at lines 450--450
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+[]|\OT1/cmr/bx/n/12 Functional
  []
 
 [9]
-Overfull \hbox (336.89326pt too wide) in alignment at lines 486--486
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 481--481
+[]|\OT1/cmr/bx/n/12 Functional
  []
 
 [10]
-Overfull \hbox (323.86424pt too wide) in alignment at lines 521--521
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 516--516
+[]|\OT1/cmr/bx/n/12 Functional
  []
 
 [11]
-Overfull \hbox (331.89749pt too wide) in alignment at lines 557--557
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 552--552
+[]|\OT1/cmr/bx/n/12 Functional
  []
 
 [12]
-Overfull \hbox (274.74947pt too wide) in alignment at lines 598--598
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 593--593
+[]|\OT1/cmr/bx/n/12 Functional
  []
 
 [13]
-Overfull \hbox (336.89326pt too wide) in alignment at lines 638--638
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 633--633
+[]|\OT1/cmr/bx/n/12 Functional
  []
 
 [14]
-Overfull \hbox (331.89749pt too wide) in alignment at lines 701--701
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 696--696
+[]|\OT1/cmr/bx/n/12 Functional
  []
 
 [15]
-Overfull \vbox (115.50394pt too high) has occurred while \output is active []
+Overfull \vbox (332.38841pt too high) has occurred while \output is active []
 
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 707--708
+Underfull \hbox (badness 10000) in paragraph at lines 702--703
 
  []
 
 
-Overfull \hbox (28.45093pt too wide) in paragraph at lines 709--710
+Overfull \hbox (28.45093pt too wide) in paragraph at lines 704--705
 []\OT1/cmr/m/n/12 Kaggle dataset (Chest X-Ray Pneu-mo-nia): [][]$\OT1/cmtt/m/n/
 12 https : / / www . kaggle . com / datasets / paultimothymooney /
  []
 
 
-Overfull \hbox (21.27864pt too wide) in paragraph at lines 710--711
+Overfull \hbox (21.27864pt too wide) in paragraph at lines 705--706
 []\OT1/cmr/m/n/12 Dataset clin-i-cal con-text / pa-per page (Cell): [][]$\OT1/c
 mtt/m/n/12 http : / / www . cell . com / cell / fulltext / S0092-[]8674(18 )
  []
 
 
-Overfull \hbox (23.58723pt too wide) in paragraph at lines 711--712
+Overfull \hbox (23.58723pt too wide) in paragraph at lines 706--707
 []\OT1/cmr/m/n/12 TensorFlow Im-age-Data-Gen-er-a-tor docs: [][]$\OT1/cmtt/m/n/
 12 https : / / www . tensorflow . org / api _ docs / python / tf / keras /
  []
 
 
-Overfull \hbox (16.9568pt too wide) in paragraph at lines 712--713
+Overfull \hbox (16.9568pt too wide) in paragraph at lines 707--708
 []\OT1/cmr/m/n/12 TensorFlow Trans-fer Learn-ing guide: [][]$\OT1/cmtt/m/n/12 h
 ttps : / / www . tensorflow . org / tutorials / images / transfer _
  []
@@ -750,19 +750,19 @@ Package rerunfilecheck Info: Checksums for `logbook.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 19313 strings out of 476182
- 364524 string characters out of 5795595
- 1947975 words of memory out of 5000000
- 41023 multiletter control sequences out of 15000+600000
+ 19309 strings out of 476182
+ 364420 string characters out of 5795595
+ 1949975 words of memory out of 5000000
+ 41019 multiletter control sequences out of 15000+600000
  562830 words of font info for 52 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 101i,12n,107p,441b,606s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,12n,107p,441b,604s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.60
 0pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on logbook.pdf (17 pages, 97398 bytes).
+Output written on logbook.pdf (17 pages, 97670 bytes).
 PDF statistics:
  128 PDF objects out of 1000 (max. 8388607)
  99 compressed objects within 1 object stream

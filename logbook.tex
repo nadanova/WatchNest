@@ -53,9 +53,8 @@
   arc=1.5mm,
   left=1mm,right=1mm,top=2mm,bottom=2mm
 ]
-\setlength{\skillstablewidth}{\dimexpr\linewidth\relax}%
 \noindent
-\begin{tabularx}{\skillstablewidth}{|p{2.8cm}|Y|}
+\begin{tabularx}{\linewidth}{|p{2.8cm}|Y|}
 \hline
 \multicolumn{2}{|l|}{\textbf{Student's Logbook}}\\ \hline
 \textbf{Date:} & #1 \\ \hline
@@ -71,17 +70,13 @@
 #5
 \end{itemize}
 \\ \hline
-\multicolumn{2}{|l|}{\textbf{Achievement of the Day:} #6}\\ \hline
-\end{tabularx}%
-\vspace{-0.6pt}\\[-\baselineskip]%
-\noindent
-\begin{tabularx}{\skillstablewidth}{|Y|Y|}
-\hline
-\textbf{Functional Skills} & \textbf{Soft Skills}\\ \hline
+\multicolumn{2}{|p{\dimexpr\linewidth-2\tabcolsep-2\arrayrulewidth}|}{\textbf{Achievement of the Day:} #6}\\ \hline
+\textbf{Functional Skills:} &
 \begin{itemize}[leftmargin=1em,nosep,topsep=0pt,itemsep=2pt]
 #7
 \end{itemize}
-&
+\\ \hline
+\textbf{Soft Skills:} &
 \begin{itemize}[leftmargin=1em,nosep,topsep=0pt,itemsep=2pt]
 #8
 \end{itemize}
