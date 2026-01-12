@@ -1,0 +1,714 @@
+%========================================
+% Industrial Training Logbook (LaTeX)
+% Student: Nada Ashraf Moussa Kamel Gomaa
+% ID: 120210358
+% Company: CLS - Learning Solutions (under DEPI)
+% Training Period: 7 Months (April–October 2024)
+%========================================
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{setspace}
+\usepackage{graphicx}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
+
+\setlength{\parindent}{0pt}
+\setstretch{1.1}
+
+% ---------- Styles ----------
+\definecolor{boxgray}{RGB}{245,245,245}
+\definecolor{linegray}{RGB}{190,190,190}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+% ---------- Week Entry Macro ----------
+% #1 Date Range
+% #2 Week No(s)
+% #3 Activities
+% #4 Summary
+% #5 Key Topics
+% #6 Achievement of the Day
+% #7 Functional Skills (bullets)
+% #8 Soft Skills (bullets)
+\newcommand{\WeekEntry}[8]{
+\begin{tcolorbox}[
+  colback=boxgray,
+  colframe=linegray,
+  boxrule=0.6pt,
+  arc=1.5mm,
+  left=1mm,right=1mm,top=2mm,bottom=2mm
+]
+\noindent
+\begin{tabularx}{\linewidth}{|p{2.8cm}|Y|}
+\hline
+\multicolumn{2}{|l|}{\textbf{Student's Logbook}}\\ \hline
+\textbf{Date:} & #1 \\ \hline
+\multicolumn{2}{|c|}{\textbf{#2}}\\ \hline
+\textbf{Activities:} &
+\begin{itemize}[leftmargin=1em,nosep,topsep=0pt,itemsep=1pt]
+#3
+\end{itemize}
+\\ \hline
+\textbf{Summary:} & #4 \\ \hline
+\textbf{Key Topics:} &
+\begin{itemize}[leftmargin=1em,nosep,topsep=0pt,itemsep=1pt]
+#5
+\end{itemize}
+\\ \hline
+\multicolumn{2}{|p{\dimexpr\linewidth-2\tabcolsep-2\arrayrulewidth}|}{\textbf{Achievement of the Day:} #6}\\ \hline
+\textbf{Functional Skills:} &
+\begin{itemize}[leftmargin=1em,nosep,topsep=0pt,itemsep=2pt]
+#7
+\end{itemize}
+\\ \hline
+\textbf{Soft Skills:} &
+\begin{itemize}[leftmargin=1em,nosep,topsep=0pt,itemsep=2pt]
+#8
+\end{itemize}
+\\ \hline
+\end{tabularx}
+\end{tcolorbox}
+}
+
+\begin{document}
+
+% ---------- Header ----------
+{\LARGE \textbf{Industrial Training Logbook Year: 2024}}\\[6pt]
+
+\textbf{Student's Name:} Nada Ashraf Moussa Kamel Gomaa\\
+\textbf{Student's ID:} 120210358\\[10pt]
+
+% ---------- Declaration ----------
+{\Large \textbf{Declaration}}\\[6pt]
+Before submitting this document for assessment, please complete the following declaration:\\[6pt]
+
+This is to certify that the contents of the Industrial Training Logbook are a true and accurate reflection of the work done by the student in the training company.\\[10pt]
+
+\textbf{Student's name:} Nada Ashraf Moussa Kamel Gomaa\\
+\textbf{Student's signature:} Nada Ashraf Moussa Kamel Gomaa\\
+\textbf{Supervisor's name:} Egypt-Digital-Pioneers-Initiative\\
+\textbf{Supervisor's signature:} DEPI- Dr. Eman Raslan\\
+\textbf{Company's name:} CLS- Learning Solutions\\[14pt]
+
+% ---------- Student Details ----------
+{\Large \textbf{Student's Details}}\\[6pt]
+\textbf{Name:} Nada Ashraf Moussa Kamel Gomaa\\
+\textbf{I/C No.:} \hspace{2cm} \textbf{Matric No.:}\\
+\textbf{Mobile Tel. No.:} 01093287761\\
+\textbf{House Tel. No.:} 01093287761\\
+\textbf{Email:} \href{mailto:Nada.gomaa@ejust.edu.eg}{Nada.gomaa@ejust.edu.eg}\\
+\textbf{Major:} Computer Science and Engineering\\
+\textbf{Minor:} ECCE\\[14pt]
+
+% ---------- Placement Details ----------
+{\Large \textbf{Placement Details}}\\[6pt]
+\textbf{Name of Company:} Egypt Digital Pioneers Initiative (CLS)\\
+\textbf{Company Address:} 26 Sharm El-Dokki Main Street, Next to Misr Gas Station in front of Dokki Metro Station, Dokki, Giza Governorate\\
+\textbf{Industrial Supervisor:} CLS learning solutions\\
+\textbf{Company Contact Tel No.:} +20 11 53615270 \hspace{1.2cm} \textbf{Fax No.:} +20 11 53615270\\
+\textbf{Training Period:} 7 Months (April to October 2024)\\
+\textbf{Allowance:} --\\
+(Indicate the amount of allowance paid per month)\\[18pt]
+
+{\Large \textbf{Student's Logbook}}\\[6pt]
+\textbf{Training intensity assumption used for planning:} 3--4 meetings per week (3--4 hours each) + continuous labs and self-study.
+
+%========================================
+% WEEKS 1–2
+%========================================
+\WeekEntry
+{1 April -- 14 April 2024}
+{Weeks 1--2}
+{
+\item Orientation to the training structure and deliverables (logbook discipline, weekly reporting, and lab submission workflow).
+\item Orientation to Microsoft SQL and relational database fundamentals.
+\item Learning SQL essentials: DDL (CREATE/ALTER/DROP) and DML (SELECT/INSERT/UPDATE/DELETE).
+\item Hands-on: database setup and environment configuration for practice.
+\item Hands-on: writing simple queries with filters, sorting, grouping, and joins.
+\item Short exercises in query debugging, fixing syntax/logic errors, and validating outputs using sample data.
+}
+{
+Initial phase focused on SQL foundations and establishing a correct working environment, followed by intensive practice on essential query patterns required for data engineering and analytics workflows.
+}
+{
+\item Relational databases and SQL Server environment setup
+\item DDL vs DML and correct usage
+\item Core SELECT queries, WHERE, ORDER BY, GROUP BY
+\item JOIN types (INNER/LEFT/RIGHT) and practical use cases
+\item Query troubleshooting and result validation
+}
+{
+Developed foundational skills in computer usage, problem-solving, teamwork, and communication
+}
+{
+\item Computer Skills
+\item Problem-solving Skills
+}
+{
+\item Communication Skills
+\item Teamwork Skills
+}
+
+%========================================
+% WEEKS 3–4
+%========================================
+\WeekEntry
+{15 April -- 28 April 2024}
+{Weeks 3--4}
+{
+\item Advanced SQL practice: multi-table joins, subqueries, correlated queries, and common table expressions (CTEs).
+\item Data quality logic in SQL: NULL handling, constraints awareness, and consistency checks.
+\item Performance basics: understanding indexes at a conceptual level and why queries slow down.
+\item Applied tasks: create tables + insert sample data + write analytical queries that simulate business reporting.
+\item Documentation habit: writing query comments, assumptions, and expected outputs for reproducibility.
+}
+{
+Deepened SQL capability from basic querying to more complex analytical and engineering-oriented patterns, emphasizing correctness, validation, and early performance awareness.
+}
+{
+\item CTEs, subqueries, correlated queries
+\item Aggregation with HAVING and multi-step analytics
+\item Data validation logic (NULL, missing values, duplicates conceptually)
+\item Basic query performance considerations and indexing concepts
+\item Reproducible SQL documentation practices
+}
+{
+Advanced SQL proficiency including complex queries, CTEs, and performance optimization techniques
+}
+{
+\item Organizing/Analyzing Data
+\item Decision-making Ability
+}
+{
+\item Critical Thinking Skills
+\item Teamwork Skills
+}
+
+%========================================
+% WEEKS 5–6
+%========================================
+\WeekEntry
+{29 April -- 12 May 2024}
+{Weeks 5--6}
+{
+\item Implementing SQL Data Warehouse concepts: OLTP vs OLAP and why analytics requires different schema design.
+\item Dimensional modeling practice: fact tables, dimension tables, and star schema vs snowflake schema.
+\item Normalization vs denormalization trade-offs and when each is justified.
+\item Hands-on: sketching a small warehouse schema for analytics reporting scenarios.
+\item Designed example KPIs and mapped them to facts/measures and dimensions.
+}
+{
+Shifted from operational SQL usage to analytical system design: learned how warehouse schemas support reporting performance, consistent metrics, and scalable analytics.
+}
+{
+\item Data warehouse fundamentals (OLTP vs OLAP)
+\item Fact vs Dimension tables and grain definition
+\item Star vs snowflake schema
+\item Normalization vs denormalization trade-offs
+\item KPI mapping to schema (measures/dimensions)
+}
+{
+Understanding of data warehouse architecture and dimensional modeling for analytics
+}
+{
+\item Organizing/Analyzing Data
+\item Decision-making Ability
+}
+{
+\item Teamwork Skills
+\item Critical Thinking Skills
+}
+
+%========================================
+% WEEKS 7–8
+%========================================
+\WeekEntry
+{13 May -- 26 May 2024}
+{Weeks 7--8}
+{
+\item ETL (Extract, Transform, Load) process concepts and why ETL is essential for warehouse reliability.
+\item Data pipeline steps: extracting from sources, cleaning, transforming, and loading into target schema.
+\item Data integrity and quality checks: consistency rules, duplicate handling, missing data strategies.
+\item Practical mini-pipeline: simulate ETL with SQL scripts and structured transformation steps.
+\item Team-based review sessions: comparing schema designs, discussing transformation rules and validation logic.
+}
+{
+Built a structured understanding of ETL pipelines and quality controls required to maintain trustworthy analytics datasets in a warehouse environment.
+}
+{
+\item ETL workflow and stages
+\item Data quality rules and validation checks
+\item Transformations aligned to business definitions
+\item Loading strategies and schema alignment
+\item Documentation of assumptions and pipeline steps
+}
+{
+Practical ETL pipeline development and data quality management skills
+}
+{
+\item Organizing/Analyzing Data
+\item Problem-solving Skills
+}
+{
+\item Communication Skills
+\item Teamwork Skills
+}
+
+%========================================
+% WEEKS 9–10
+%========================================
+\WeekEntry
+{27 May -- 9 June 2024}
+{Weeks 9--10}
+{
+\item Python programming fundamentals for data workflows: syntax, variables, loops, functions.
+\item Data structures: lists, tuples, dictionaries, sets; selecting structures based on task needs.
+\item Error handling with try/except; writing safer scripts.
+\item File handling and directory operations: reading/writing files, working with paths.
+\item Initial work with NumPy arrays and basic Pandas operations for data manipulation.
+}
+{
+Established Python fundamentals required for automation, data preprocessing, and future ML experimentation. Emphasis was placed on correctness, readable code, and controlled error handling.
+}
+{
+\item Python basics (functions, loops, conditions)
+\item Data structures and practical usage
+\item Error handling and debugging workflow
+\item File handling and scripting habits
+\item NumPy and Pandas basics
+}
+{
+Foundation in Python programming for data workflows and automation
+}
+{
+\item Computer Skills
+\item Quantitative \& Analytical Skills
+}
+{
+\item Communication Skills
+\item Interpersonal Skills
+}
+
+%========================================
+% WEEKS 11–12
+%========================================
+\WeekEntry
+{10 June -- 23 June 2024}
+{Weeks 11--12}
+{
+\item Data preprocessing with Python: handling missing values, duplicates conceptually, encoding categorical data (concept-level).
+\item Exploratory Data Analysis basics: summary stats, simple plots, and interpretation.
+\item Intro to ML workflow idea: data $\rightarrow$ split $\rightarrow$ train $\rightarrow$ evaluate (concept-level).
+\item Strengthened notebook discipline: clean sections, comments, and reproducible runs.
+\item Group sessions: presenting solutions, peer review of code clarity and correctness.
+}
+{
+Expanded Python skills toward data preparation and analysis patterns that directly support ML and data engineering deliverables.
+}
+{
+\item Data preprocessing patterns in Python
+\item Basic EDA workflow and interpretation
+\item Reproducible notebook structure and documentation
+\item Clean coding practices and peer review
+\item Intro ML pipeline framing (conceptual)
+}
+{
+Data preprocessing and exploratory analysis skills for machine learning readiness
+}
+{
+\item Organizing/Analyzing Data
+\item Problem-solving Skills
+}
+{
+\item Critical Thinking Skills
+\item Teamwork Skills
+}
+
+%========================================
+% WEEKS 13–14
+%========================================
+\WeekEntry
+{24 June -- 7 July 2024}
+{Weeks 13--14}
+{
+\item Introduction to Agile development and Scrum roles/events/artifacts.
+\item Participation in sprint planning and daily stand-up simulations.
+\item Understanding tickets/issue tracking systems: breaking tasks, estimating, defining acceptance criteria.
+\item Documentation of sprint tasks and aligning technical deliverables with sprint goals.
+\item Collaboration practice: team communication rules, meeting notes, and action items.
+}
+{
+Learned Agile/Scrum as an operational framework for managing technical tasks, coordinating teams, and ensuring traceable progress across complex training modules and project milestones.
+}
+{
+\item Agile principles and Scrum framework
+\item Sprint planning, daily standups, task breakdown
+\item Ticketing workflow and acceptance criteria
+\item Documentation habits for engineering projects
+\item Collaboration and coordination routines
+}
+{
+Practical ETL pipeline development and data quality management skills
+}
+{
+\item Organizing/Analyzing Data
+\item Problem-solving Skills
+}
+{
+\item Communication Skills
+\item Teamwork Skills
+}
+
+%========================================
+% WEEKS 15–16
+%========================================
+\WeekEntry
+{8 July -- 21 July 2024}
+{Weeks 15--16}
+{
+\item Azure Data Fundamentals: core cloud concepts and why cloud matters for data/ML systems.
+\item Understanding cloud storage, compute, and security concepts; shared responsibility concept-level.
+\item Hands-on with Azure Data Studio: connecting, exploring data, and running queries.
+\item Relational vs non-relational databases: use-cases and tradeoffs.
+\item Security and compliance awareness for data systems (concept-level).
+}
+{
+Developed baseline cloud literacy focused on data platforms, including tool usage (Azure Data Studio) and fundamental design/security considerations.
+}
+{
+\item Cloud data concepts and service categories
+\item Azure Data Studio workflow
+\item Relational vs non-relational databases
+\item Security/compliance awareness (fundamentals)
+\item Cloud value for business and scalability
+}
+{
+Cloud data platform fundamentals and Azure Data Studio proficiency
+}
+{
+\item Computer Skills
+\item Decision-making Ability
+}
+{
+\item Communication Skills
+\item Interpersonal Skills
+}
+
+%========================================
+% WEEKS 17–18
+%========================================
+\WeekEntry
+{22 July -- 4 August 2024}
+{Weeks 17--18}
+{
+\item Advanced Azure discussion: designing secure and scalable data solutions (concept-level).
+\item Data ingestion and pipeline thinking: batch vs streaming (concept-level).
+\item Monitoring and optimization mindset for cloud workflows (concept-level).
+\item Team-based case studies: mapping business requirements to data services and pipeline components.
+\item Consolidation quiz sessions and practical review.
+}
+{
+Moved from fundamental cloud concepts to solution-thinking: how to select services and plan pipelines while considering scalability, monitoring, and security.
+}
+{
+\item Designing data solutions in Azure (concepts)
+\item Batch vs streaming ingestion (overview)
+\item Monitoring and optimization mindset
+\item Security and scalability considerations
+\item Translating requirements to architecture
+}
+{
+Advanced cloud solution design thinking and architecture planning
+}
+{
+\item Organizing/Analyzing Data
+\item Decision-making Ability
+}
+{
+\item Leadership Skills
+\item Communication Skills
+}
+
+%========================================
+% WEEKS 19–20 (Course 7: NLP Foundations)
+%========================================
+\WeekEntry
+{5 August -- 18 August 2024}
+{Weeks 19--20}
+{
+\item Course 7: NLP scope and pipeline: text acquisition, cleaning, normalization, tokenization, modeling, evaluation.
+\item NLU vs NLG: understanding vs generation tasks and examples.
+\item NLP applications covered: toxicity classification, topic classification, grammatical error correction, information retrieval, question answering.
+\item Key NLP challenges: ambiguity (lexical/syntactic/semantic), context dependence, noisy web data, multilinguality/low-resource languages, implicit meaning (sarcasm/cultural context).
+\item Preprocessing toolkit concepts: lowercase tradeoffs, regex concept practice, tokenization types (character/word/sentence/subword).
+\item Tool comparison: NLTK vs spaCy (use-cases, tokenization support, pipeline differences).
+}
+{
+Built the foundations of NLP workflow and challenges, linking preprocessing decisions to downstream model performance and evaluation reliability.
+}
+{
+\item NLP pipeline and task taxonomy (NLU/NLG)
+\item Text cleaning and normalization decisions
+\item Tokenization types and trade-offs
+\item NLTK vs spaCy overview
+\item Real-world NLP application mapping
+}
+{
+NLP pipeline understanding and text preprocessing proficiency
+}
+{
+\item Problem-solving Skills
+\item Quantitative \& Analytical Skills
+}
+{
+\item Critical Thinking Skills
+\item Teamwork Skills
+}
+
+%========================================
+% WEEKS 21–22 (Course 7: Traditional NLP)
+%========================================
+\WeekEntry
+{19 August -- 1 September 2024}
+{Weeks 21--22}
+{
+\item Feature engineering for text: one-hot encoding (limitations), Bag of Words, TF-IDF, and N-grams.
+\item Understanding sparsity/dimensionality problems and why vocabulary control matters.
+\item Traditional ML modeling for NLP: logistic regression, naive Bayes, decision trees (concept + workflow).
+\item Practice workflow: vectorizer $\rightarrow$ model $\rightarrow$ evaluation (concept-level).
+\item Lab-style discussion based on supervised classification pipelines (e.g., fake news-style classification as a practice theme).
+}
+{
+Advanced from preprocessing to classical NLP representations and traditional ML models, emphasizing interpretability, pipeline structure, and evaluation discipline.
+}
+{
+\item One-hot, BoW, TF-IDF, N-grams
+\item Sparsity and dimensionality concerns
+\item Classical supervised NLP models
+\item Vectorizer-to-classifier pipelines
+\item Evaluation framing and error analysis mindset
+}
+{
+Classical NLP techniques and feature engineering for text data
+}
+{
+\item Organizing/Analyzing Data
+\item Decision-making Ability
+}
+{
+\item Teamwork Skills
+\item Critical Thinking Skills
+}
+
+%========================================
+% WEEKS 23–24 (Course 7: Deep Learning NLP)
+%========================================
+\WeekEntry
+{2 September -- 15 September 2024}
+{Weeks 23--24}
+{
+\item Deep learning NLP evolution: embeddings and sequence modeling.
+\item Embeddings: Word2Vec (CBOW/Skip-gram), GloVe, FastText; contextual embeddings concept: ELMo/BERT/GPT/T5.
+\item RNN fundamentals and gradient issues; motivation for LSTM and GRU.
+\item Seq2Seq concept: encoder/decoder, bottleneck problem, and attention mechanism concept.
+\item Evaluation metrics overview: BLEU (translation), ROUGE (summarization), WER (speech).
+\item Transformers overview and why attention is important for long-range dependencies.
+}
+{
+Covered deep-learning NLP foundations and the motivation for transformer architectures, linking model families to tasks and evaluation metrics.
+}
+{
+\item Static vs contextual embeddings
+\item RNN/LSTM/GRU concept and limitations
+\item Seq2Seq and attention concept
+\item BLEU/ROUGE/WER evaluation overview
+\item Transformer motivation and attention role
+}
+{
+Deep learning NLP foundations and transformer architecture understanding
+}
+{
+\item Quantitative \& Analytical Skills
+\item Problem-solving Skills
+}
+{
+\item Leadership Skills
+\item Communication Skills
+}
+
+%========================================
+% WEEKS 25–26 (Course 8: Hugging Face)
+%========================================
+\WeekEntry
+{16 September -- 29 September 2024}
+{Weeks 25--26}
+{
+\item Course 8: Hugging Face overview and ecosystem components: Hub, Transformers, Datasets, Tokenizers, Spaces, Accelerate.
+\item Hub usage concepts: model hub, dataset hub, model/dataset cards, hosted widgets for quick testing.
+\item Transformers library: pre-trained model families and tasks (classification, generation, QA, translation, NER, summarization).
+\item Pipelines abstraction: tokenization + inference + post-processing as an end-to-end workflow.
+\item Model architecture families mapping:
+  \begin{itemize}[leftmargin=*,nosep]
+    \item Encoder: BERT/DistilBERT/RoBERTa for classification/NER/extractive QA.
+    \item Decoder: GPT-style for text generation.
+    \item Encoder-decoder: T5/BART/mBART/Marian for translation/summarization/generative QA.
+  \end{itemize}
+\item Discussed transformer challenges: language dominance (English), data availability, long-document cost, opacity, bias in internet-trained models.
+}
+{
+Established working knowledge of Hugging Face tooling and how its libraries and Hub accelerate experimentation, sharing, and deployment for transformer-based workflows.
+}
+{
+\item Hugging Face Hub (models/datasets/spaces) and cards
+\item Transformers library and pipelines
+\item Datasets and Tokenizers libraries
+\item Model family selection by task
+\item Known transformer limitations: bias/opacity/long context
+}
+{
+Hugging Face ecosystem proficiency and transformer model selection skills
+}
+{
+\item Computer Skills
+\item Organizing/Analyzing Data
+}
+{
+\item Communication Skills
+\item Teamwork Skills
+}
+
+%========================================
+% WEEKS 27–28 (Course 8: MLOps + MLflow)
+%========================================
+\WeekEntry
+{30 September -- 13 October 2024}
+{Weeks 27--28}
+{
+\item MLOps definition: practices to manage ML development, deployment, maintenance with automation across the lifecycle.
+\item Why MLOps: scalability, reproducibility, fast time-to-market, and monitoring.
+\item Core data governance concepts: data lineage, data provenance, metadata.
+\item CI/CD in MLOps: automated testing of code and models, version control for code/data/models, automated data validation.
+\item Continuous Training (CT): retraining when data profile changes and drift affects performance.
+\item MLflow overview: Tracking, Projects, Models, Model Registry.
+\item MLflow Tracking: logging parameters, metrics, artifacts and using UI for comparison.
+\item MLflow Projects: packaging code + environment for reproducibility (Conda/Docker concept).
+\item MLflow Models: packaging and deployment options (local, REST, cloud/container concept).
+\item MLflow Model Registry: versioning + staging + production + archived lifecycle control.
+}
+{
+Built MLOps literacy centered on MLflow as a lifecycle management tool, connecting governance and CI/CD/CT concepts to reliable ML delivery.
+}
+{
+\item MLOps lifecycle and automation rationale
+\item Data lineage/provenance/metadata
+\item CI/CD adaptations for ML + Continuous Training
+\item MLflow Tracking/Projects/Models/Registry
+\item Reproducibility and versioning practices
+}
+{
+MLOps practices and MLflow lifecycle management understanding
+}
+{
+\item Quantitative \& Analytical Skills
+\item Problem-solving Skills
+}
+{
+\item Critical Thinking Skills
+\item Teamwork Skills
+}
+
+%========================================
+% WEEKS 29–30 (Course 9: Prompt Engineering + FINAL PROJECT)
+%========================================
+\WeekEntry
+{14 October -- 27 October 2024}
+{Weeks 29--30}
+{
+\item Course 9 (Prompt Engineering): prompt structure, constraints, format control, examples (zero-shot vs few-shot), iterative refinement and evaluation prompts.
+\item Applied prompt engineering for practical work: debugging assistance, refactoring notebooks, generating checklists and edge cases, improving documentation wording and structure.
+\item Final applied project: \textbf{cheXray\_Classifier} (Pneumonia vs Normal) using Kaggle dataset:
+  \begin{itemize}[leftmargin=*,nosep]
+    \item Dataset: 5,863 pediatric chest X-rays; folders train/test/val with NORMAL/PNEUMONIA.
+    \item Context and reference paper link included in resources.
+  \end{itemize}
+\item Colab pipeline implementation (end-to-end):
+  \begin{itemize}[leftmargin=*,nosep]
+    \item Kaggle API setup: upload kaggle.json, permissions, download + unzip dataset.
+    \item Verified counts per split and label folder; validated directory structure.
+    \item Built file path lists using os.walk; shuffled; confirmed lengths.
+    \item Preprocessing and augmentation with ImageDataGenerator:
+      rescale, rotation, shifts, shear, zoom, horizontal flip, fill mode.
+    \item Generators via flow\_from\_directory with target\_size=(224,224), batch\_size=32, class\_mode=binary.
+    \item Visual sanity checks: plotting sample batches from train/val/test generators.
+  \end{itemize}
+\item Modeling work (baseline + transfer learning + fine-tuning):
+  \begin{itemize}[leftmargin=*,nosep]
+    \item Baseline custom CNN (Functional API): Conv2D blocks (16/32/64), BatchNorm, ReLU, MaxPool, Dropout, Flatten, Dense, Sigmoid.
+    \item Callbacks: ModelCheckpoint (best weights), EarlyStopping, ReduceLROnPlateau.
+    \item Transfer learning: ResNet152V2 (ImageNet, include\_top=False), frozen base, custom head (GAP, Dense, BatchNorm, Dropout, Sigmoid).
+    \item Fine-tuning: unfreeze base model with controlled layer freezing (e.g., freeze all but last ~30 layers), careful LR settings, monitoring overfitting.
+  \end{itemize}
+\item Deployment workflow (Hugging Face + Gradio):
+  \begin{itemize}[leftmargin=*,nosep]
+    \item Hugging Face login (CLI/notebook), repository use, versioning with add/commit/push concept.
+    \item Model saving (.h5/.keras) and packaging for inference.
+    \item Gradio demo: image upload $\rightarrow$ resize to 224x224 $\rightarrow$ normalize $\rightarrow$ predict $\rightarrow$ label (Pneumonia/Normal) with threshold 0.5.
+    \item Validated end-to-end inference usability.
+  \end{itemize}
+\item Final presentation preparation: problem statement, dataset context, preprocessing, models, evaluation approach, deployment screenshots/steps, and lessons learned.
+}
+{
+Completed an end-to-end ML project under an intensive schedule: dataset ingestion, preprocessing, baseline CNN, transfer learning + fine-tuning, and deployment using Hugging Face/Gradio, supported by MLOps and prompt engineering practices.
+}
+{
+\item Chest X-ray pneumonia dataset structure and clinical context
+\item Keras data generators and augmentation for images
+\item Custom CNN vs transfer learning vs fine-tuning
+\item Callbacks for training control and reproducibility
+\item Hugging Face Hub/Spaces deployment and Gradio UI
+\item Prompt engineering patterns for debugging, documentation, evaluation
+}
+{
+End-to-end ML project delivery from data to deployment
+}
+{
+\item Problem-solving Skills
+\item Quantitative \& Analytical Skills
+}
+{
+\item Leadership Skills
+\item Communication Skills
+}
+
+%========================================
+% Helpful Links (Credible)
+%========================================
+\newpage
+{\Large \textbf{Helpful References (Links)}}\\[6pt]
+\begin{itemize}[leftmargin=*]
+  \item Kaggle dataset (Chest X-Ray Pneumonia): \url{https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia}
+  \item Dataset clinical context / paper page (Cell): \url{http://www.cell.com/cell/fulltext/S0092-8674(18)30154-5}
+  \item TensorFlow ImageDataGenerator docs: \url{https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator}
+  \item TensorFlow Transfer Learning guide: \url{https://www.tensorflow.org/tutorials/images/transfer_learning}
+  \item Keras Callbacks (EarlyStopping / ReduceLROnPlateau / ModelCheckpoint): \url{https://keras.io/api/callbacks/}
+  \item Hugging Face main site: \url{https://huggingface.co/}
+  \item Hugging Face Hub docs: \url{https://huggingface.co/docs/hub/index}
+  \item Hugging Face Transformers docs: \url{https://huggingface.co/docs/transformers/index}
+  \item Hugging Face Spaces docs: \url{https://huggingface.co/docs/hub/spaces}
+  \item Gradio documentation: \url{https://www.gradio.app/docs}
+  \item MLflow official documentation: \url{https://mlflow.org/docs/latest/index.html}
+\end{itemize}
+
+\end{document}
